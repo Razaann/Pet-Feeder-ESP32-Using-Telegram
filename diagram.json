@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -72.1, "left": 4.6, "attrs": {} },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": 52.2, "left": 259.3, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 199.6, "left": 259.2, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": 202.36, "left": 182.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 203, "left": 153.4, "rotate": 180, "attrs": {} },
+    {
+      "type": "wokwi-hx711",
+      "id": "cell1",
+      "top": -74.2,
+      "left": 261.8,
+      "attrs": { "type": "5kg" }
+    }
+  ],
+  "connections": [
+    [ "rtc1:5V", "esp:VIN", "red", [ "h-28.8", "v76.4", "h-240", "v-67.2" ] ],
+    [ "rtc1:GND", "esp:GND.2", "black", [ "h-38.4", "v96", "h-240", "v-86.4" ] ],
+    [ "rtc1:SDA", "esp:D21", "green", [ "h-48", "v-96.3" ] ],
+    [ "rtc1:SCL", "esp:D22", "green", [ "h-57.6", "v-134.6" ] ],
+    [ "cell1:VCC", "esp:3V3", "red", [ "h-67.2", "v105.6" ] ],
+    [ "cell1:GND", "esp:GND.1", "black", [ "h-76.8", "v124.5" ] ],
+    [ "cell1:DT", "esp:D13", "green", [ "h-86.4", "v-38.9", "h-192", "v144" ] ],
+    [ "cell1:SCK", "esp:D12", "green", [ "h-96", "v-58.4", "h-115.2", "v0", "h-76.8", "v144" ] ],
+    [ "servo1:V+", "vcc1:VCC", "green", [ "h0" ] ],
+    [ "servo1:GND", "gnd1:GND", "black", [ "h0" ] ],
+    [ "servo1:GND", "esp:GND.2", "black", [ "h-278.4", "v-172.8" ] ],
+    [ "servo1:PWM", "esp:D5", "green", [ "h-144", "v-249.4" ] ],
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ]
+  ],
+  "dependencies": {}
+}

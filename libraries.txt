@@ -1,0 +1,7 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+RTClib
+ESP32Servo
+HX711
+Adafruit HX711
+UniversalTelegramBot
