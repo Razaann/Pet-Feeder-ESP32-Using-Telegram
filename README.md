@@ -27,6 +27,9 @@ Ensure these libraries are installed in your Arduino IDE:
 - `RTClib.h`
 - `Wire.h`
 
+## 🖼️ Wokwi Preview
+![Preview](https://i.imghippo.com/files/RzK2304iMc.png)
+
 ## 💬 Telegram Setup
 
 This project **sends notifications only** (no user commands). To receive messages:
