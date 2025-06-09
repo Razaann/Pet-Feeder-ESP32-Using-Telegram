@@ -28,7 +28,7 @@ Ensure these libraries are installed in your Arduino IDE:
 - `Wire.h`
 
 ## 🖼️ Wokwi Preview
-![Preview](https://i.imghippo.com/files/RzK2304iMc.png)
+![Preview](https://files.catbox.moe/ge27j1.png)
 
 ## 💬 Telegram Setup
 
